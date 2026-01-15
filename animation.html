@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    div{
+            padding: 50px;
+            font-size: 60px;
+            text-align: center;
+            color: darkorange;
+            animation-name: zooming;
+            animation-duration: 1.5s;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: 3;
+        }
+        @keyframes zooming{
+            0% {
+                transform: scale(0.1);
+            }
+            50% {
+                transform: scale(1.0);
+            }
+            100% {
+                transform: scale(2);
+            }
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+
+        @keyframes example {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:1700px; top:0px;}
+            50%  {background-color:blue; left:1700px; top:550px;}
+            75%  {background-color:green; left:0px; top:550px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+
+        /* -------------------------
+           1. Animasi Bergerak
+        -------------------------- */
+        .move-box {
+            width: 100px;
+            height: 100px;
+            background: #3498db;
+            margin: 20px auto;
+            position: relative;
+            animation: slide 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes slide {
+            0% { left: 0; }
+            100% { left: 200px; }
+        }
+
+        /* -------------------------
+           2. Animasi Rotasi
+        -------------------------- */
+        .rotate-box {
+            width: 100px;
+            height: 100px;
+            background: #e67e22;
+            margin: 20px auto;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* -------------------------
+           3. Animasi Fade In
+        -------------------------- */
+        .fade-text {
+            font-size: 24px;
+            margin: 30px 0;
+            animation: fadein 3s infinite alternate;
+        }
+
+        @keyframes fadein {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* -------------------------
+           4. Animasi Bouncing
+        -------------------------- */
+        .bounce-ball {
+            width: 60px;
+            height: 60px;
+            background: #2ecc71;
+            border-radius: 50%;
+            margin: 20px auto;
+            animation: bounce 0.001s infinite ease;
+            position: relative;
+        }
+
+        @keyframes bounce {
+            0% { top: 0; }
+            50% { top: 80px; }
+            100% { top: 0; }
+        }
+
+        /* -------------------------
+           5. Animasi Loading Spinner
+        -------------------------- */
+        .spinner {
+            width: 70px;
+            height: 70px;
+            border: 8px solid #ddd;
+            border-top: 8px solid #8e44ad;
+            border-radius: 50%;
+            margin: 40px auto;
+            animation: loading 1s infinite linear;
+        }
+
+        @keyframes loading {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+</style>        
+
+</head>
+<body>
+    <div>Zooming In</div>
+
+    <div class="box"></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="move-box"></div><br><br>
+
+    <div class="rotate-box"></div>
+
+    <div class="fade-text">Assalamualaikum</div>
+
+    <div class="bounce-ball"></div><br><br>
+
+    <div class="spinner"></div>
+</body>
+</html>

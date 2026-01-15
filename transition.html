@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .smooth {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 1em 2em;
+            width: 10em;
+            border-radius: 1.5em;
+            color: #fff;
+            background-color: mediumblue;
+            transition-property: background-color;
+            transition-duration: 0.3s;
+        }
+        .smooth:hover, .smooth:focus{
+            background-color: red;
+        }
+
+        .card {
+            width: 200px;
+            height: 150px;
+            background: #3498db;
+            border-radius: 10px;
+            margin: 20px auto;
+            transition: background-color 0.5s, transform 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .card:hover {
+            background-color: #2ecc71;
+            transform: scale(1.1);
+        }
+
+         .box {
+            width: 100px;
+            height: 100px;
+            background: purple;
+            margin: 40px auto;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .box:hover {
+            transform: translateX(150px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="#" class="smooth">AwesomeSauce</a>
+
+<div class="card">
+        Hover Me
+</div>
+
+<div class="box"></div>
+
+</body>
+</html>
